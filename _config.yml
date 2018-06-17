@@ -1,2 +1,3 @@
 name: Paul Bellette
 markdown: kramdown
+permalink: /blog/:year/:month/:day/:title
