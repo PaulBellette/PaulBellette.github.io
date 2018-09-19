@@ -13,9 +13,12 @@
        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
     <head>
         <title>{{ page.title }}</title>
-    
+
         <link rel="stylesheet" type="text/css" href="/css/main.css">
         {% seo %}
+        {% if site.google_analytics and jekyll.environment == 'production' %}
+        {% include analytics.html %}
+        {% endif %}
     </head>
 
 
@@ -32,7 +35,7 @@
   {{ content }}
 
 </div>
-  
+
   <footer>
    <ul>
    <li><a href="mailto:pbellette1@gmail.com">email</a></li>
