@@ -29,6 +29,6 @@ The demands of work and family are high, and I feel like you should be able to e
 To which my son replied "You could teach them how to kiss!"
 I think I failed in my metaphor somewhere...
 
-Maybe I'm just wrong. There is still the strongest sense in me that somewhere along the way we fell into a trap of our own creation. We made a machine that feeds itself and it got too big and out of control. Maybe it is just a symptom of being in my late 30's and clinging on to the idealisim of my youth. Ah well.
+Maybe I'm just wrong. There is still the strongest sense in me that somewhere along the way we fell into a trap of our own creation. We made a machine that feeds itself and it got too big and out of control. Maybe it is just a symptom of being in my late 30's and clinging on to the idealism of my youth. Ah well.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/AagXbraxPK0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
