@@ -4,8 +4,6 @@ title: "Dynamical Systems Doing Weird Shit"
 date: 2018-09-28
 ---
 
-Work in Progress...
-
 So this another set of notes for an IEEE journal club presentation. This time I have picked [Dynamical Systems That Sort Lists, Diagonalize Matrices, and Solve Linear Programming Problems](https://ieeexplore.ieee.org/document/194420). I think this paper is super kawaii! I'm not sure if it is a practical result as it stands but it is a really interesting idea. The main idea is to approximately solve combinatorial optimization problems by solving a flow on a restricted continuous space that will have the "answer" as the final state at $t=\infty$. I came across this paper while looking into graph isomorphism in the dim mists of time, so I will use that as a lead in example.
 
 ## Matching Graphs
