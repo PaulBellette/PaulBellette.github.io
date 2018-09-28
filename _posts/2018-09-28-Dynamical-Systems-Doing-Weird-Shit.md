@@ -24,15 +24,15 @@ $$ \lVert M \rVert_{F}^{2} = trace(MM') $$
 
 and a bit of mucking around we can transform the above minimization problem into the maximization of
 
-$$ J = trace(A\phi'B\phi) + \lambda (\phi'\phi - I) $$
+$$ J = trace(A \phi' B \phi) + \lambda (\phi' \phi - I) $$
 
 I have sneakily stuck in a matrix of Lagrange multipliers $\lambda$ that ensure that $\phi$ is an orthogonal matrix. After spending a reasonable amount of time staring blankly at the [matrix cookbook](https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf), taking some scalar by matrix derivatives and questioning your life choices you can show that
 
-$$ \frac{\partial J}{\partial \phi} = \phi(\phi'B\phiA - A\phi'B\phi) $$
+$$ \frac{\partial J}{\partial \phi} = \phi(\phi' B \phi A - A \phi' B \phi) $$
 
 (note this has so many echos of deriving the Riccati equations of LQG control it isn't funny). Now say we start with an initial guess at $\phi$ and we want to turn it into the right answer as we evolve the system in time. We can do this by using gradient descent, i.e.
 
-$$ \frac{\partial \phi}{\partial t} =  -\phi(\phi'B\phiA - B\phi'A\phi) $$
+$$ \frac{\partial \phi}{\partial t} =  -\phi(\phi' B \phi A - B \phi' A \phi) $$
 
 So we just made an analog computer for solving graph isomorphism problems (apart from any grotesque errors I have made above, but you get the picture). In fact here is the real picture (which took frigging ages and still looks terrible!).
 
