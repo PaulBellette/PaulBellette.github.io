@@ -6,7 +6,7 @@ date: 2019-07-30
 
 Riverrun, past Eve and Adam's, from swerve of shore to bend of bay, brings us by a commodius vicus of recirculation back to yet another set of notes for an IEEE journal club presentation [^1]. I have been spending a lot of time thinking and working on stochastic optimisation problems lately and I thought it would be interesting to have a look at an early paper on what has come to be called the REINFORCE Algorithm or "Policy Gradients" in the Reinforcement Learning literature with the explicitly named [Simple Statistical Gradient-Following Algorithms for Connectionist Reinforcement Learning](https://link.springer.com/content/pdf/10.1007%2FBF00992696.pdf). So at first glance this appears to be yet another rebranding of gradient ascent in machine learning, but it is a little bit more interesting than that. The crux of the algorithm actually turns out to be a really useful trick that has been rediscovered in multiple fields (in fact the divergence of fields is also independently interesting as Control Theory is Reinforcement Learning is Stochastic Optimisation is Simulation Optimisation, the only difference is dogma). It is also another great example of a theory result in Neural Networks that took a long time before the practical applications became feasible. Now you can build an agent to play pong from pixels with no knowledge of the game apart from defining a reward function and a control space (notes on implementation details in the video are [here](http://karpathy.github.io/2016/05/31/rl/)).
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/YOW8m2YGtRg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YOW8m2YGtRg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 I won't wax lyrical about the algorithm, the paper discusses it well enough and there are already a million cv padding, bloodless, didactic blog posts about Policy Gradients on the internet. I will just talk a bit about the problem setup because I don't think that is super clear in the paper and say a little about the magic trick which makes it really cool.
 
@@ -52,7 +52,7 @@ So, I will go through more on the night, but in the paper's version of this prob
 
 $$ \nabla_{u}E(f(x)) \approx f(x_i)\nabla_{u}log(p_{u}(x_i)) $$
 
-So I guess you can sort of think of it as a greedy method where you take whatever samples you can get and update the weights to make the network do what you want right away. Also an offset to the reward is introduced, which you can think of a type of importance sampling for the gradient estimator. Simple. And it seems to sort of work.
+So I guess you can sort of think of it as a greedy method where you take whatever samples you can get and update the weights to make the network do what you want right away. Also an offset to the reward is introduced, which you can think of as a type of importance sampling for the gradient estimator. Simple. And it seems to sort of work.
 
 ## So What is Wrong with It?
 
