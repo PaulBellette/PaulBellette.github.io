@@ -48,14 +48,14 @@ Now the last part is working out how do we evaluate the objective, i.e. we want 
 So to summarize we can turn the set cover problem into a Linear Algebra problem, provided we restrict the elements of $x$ to be either $0$ or $1$. This is where the "integer" in the linear integer program comes from. The summarize the above as a set of equations. We want
 
 $$
-\begin{align}
+\begin{align*}
 & \textrm{Minimize    } cx\\
 & \textrm{Subject to    }  Ax \geq b\\
 & \textrm{where}\\
 & x_{i} \in \{0,1\} \textrm{ for } i = 1,...,N\\
 & c_{j} = 1 \textrm{ for } j=1,...,M\\
 & b_{i} = 1 \textrm{ for } i=1,...,N\\
-\end{align}
+\end{align*}
 $$
 
 So why do we bother to set it up in this form? Well we want to be able to use powerful Linear Integer Programming software libraries that have been developed. These libraries use sophisticated exact and heuristic algorithms to speed up the search for the optimal vector $x$. A famous algorithm of this type is [Branch and Bound](https://en.wikipedia.org/wiki/Branch_and_bound) which has an Australian connection via the idea's genesis in the work of the mathematician [Alison Harcourt](https://en.wikipedia.org/wiki/Alison_Harcourt). The two most notable libraries for solving Integer Linear Programs are CPLEX and Gurobi (which are unfortunately closed source so I won't bother linking to commercial websites for these). There are open source alternatives such as the c++ library [COIN-OR](https://github.com/coin-or/Clp), which I think (maybe) is what Mathematica uses underneath to solve these problems.
