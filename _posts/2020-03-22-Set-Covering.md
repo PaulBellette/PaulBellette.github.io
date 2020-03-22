@@ -16,11 +16,11 @@ Now also say you have a bunch of streaming services that you would need to sign 
 
 $$
 \begin{align}
-\textrm{Netflix} =  \{\textrm{Paris Texas}, \textrm{Rope},  \textrm{火垂るの墓} \}\\
-\textrm{Prime} =  \{\textrm{Rope}, \textrm{Hunger}, \textrm{The Proposition}, \textrm{Blue Velvet}\}\\
-\textrm{Stan} =  \{\textrm{The Proposition}, \textrm{Mother}\}\\
-\textrm{Fetch} =  \{\textrm{Rope},  \textrm{Waltz with Bashir}, \textrm{Blue Velvet}, \textrm{Mother}\}\\
-\end{align}
+& \textrm{Netflix} =  \{\textrm{Paris Texas}, \textrm{Rope},  \textrm{火垂るの墓} \}\\
+& \textrm{Prime} =  \{\textrm{Rope}, \textrm{Hunger}, \textrm{The Proposition}, \textrm{Blue Velvet}\}\\
+& \textrm{Stan} =  \{\textrm{The Proposition}, \textrm{Mother}\}\\
+& \textrm{Fetch} =  \{\textrm{Rope},  \textrm{Waltz with Bashir}, \textrm{Blue Velvet}, \textrm{Mother}\}\\
+& \end{align}
 $$
 
 So the set cover problem can be set up as a decision problem or as an optimization problem. The decision problem is "can I sign up for $k$ streaming services such that I can see all the movies that I want to watch". The optimization version ask "what is the minimal number of streaming services I can sign up for such that I can watch all the movies that I want to see?". Now (hopefully if I set it up right) you can see that each stream service is a proper subset of $U$ and the union of the streaming services, which we will call $S$, is equal to $U$. So straight away you can see that a naive strategy would be enumerate all the subsets of $S$ and find the smallest one where the union of the subsets covers $U$. The problem is that this will involve $2^N$ operations, where $N$ is the number of subsets (4 streaming services in this case, which isn't that big for this particular example but can get very large for real problems making naive search practically impossible).
@@ -49,12 +49,12 @@ So to summarize we can turn the set cover problem into a Linear Algebra problem,
 
 $$
 \begin{align}
-\textrm{Minimize    } cx\\
-\textrm{Subject to    }  Ax \geq b\\
-\textrm{where}\\
-x_{i} \in \{0,1\} \textrm{ for } i = 1,...,N\\
-c_{j} = 1 \textrm{ for } j=1,...,M\\
-b_{i} = 1 \textrm{ for } i=1,...,N\\
+& \textrm{Minimize    } cx\\
+& \textrm{Subject to    }  Ax \geq b\\
+& \textrm{where}\\
+& x_{i} \in \{0,1\} \textrm{ for } i = 1,...,N\\
+& c_{j} = 1 \textrm{ for } j=1,...,M\\
+& b_{i} = 1 \textrm{ for } i=1,...,N\\
 \end{align}
 $$
 
