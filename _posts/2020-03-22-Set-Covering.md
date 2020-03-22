@@ -15,12 +15,12 @@ $$ U = \{\textrm{Paris Texas}, \textrm{Rope}, \textrm{Waltz with Bashir}, \textr
 Now also say you have a bunch of streaming services that you would need to sign up for to be able to watch these movies. Now the catch is that (as always) not one of the streaming services has all the movies that you want to watch. So say for example,
 
 $$
-\begin{*align}
+\begin{align}
 \textrm{Netflix} =  \{\textrm{Paris Texas}, \textrm{Rope},  \textrm{火垂るの墓} \}\\
 \textrm{Prime} =  \{\textrm{Rope}, \textrm{Hunger}, \textrm{The Proposition}, \textrm{Blue Velvet}\}\\
 \textrm{Stan} =  \{\textrm{The Proposition}, \textrm{Mother}\}\\
 \textrm{Fetch} =  \{\textrm{Rope},  \textrm{Waltz with Bashir}, \textrm{Blue Velvet}, \textrm{Mother}\}\\
-\end{*align}
+\end{align}
 $$
 
 So the set cover problem can be set up as a decision problem or as an optimization problem. The decision problem is "can I sign up for $k$ streaming services such that I can see all the movies that I want to watch". The optimization version ask "what is the minimal number of streaming services I can sign up for such that I can watch all the movies that I want to see?". Now (hopefully if I set it up right) you can see that each stream service is a proper subset of $U$ and the union of the streaming services, which we will call $S$, is equal to $U$. So straight away you can see that a naive strategy would be enumerate all the subsets of $S$ and find the smallest one where the union of the subsets covers $U$. The problem is that this will involve $2^N$ operations, where $N$ is the number of subsets (4 streaming services in this case, which isn't that big for this particular example but can get very large for real problems making naive search practically impossible).
@@ -48,14 +48,14 @@ Now the last part is working out how do we evaluate the objective, i.e. we want 
 So to summarize we can turn the set cover problem into a Linear Algebra problem, provided we restrict the elements of $x$ to be either $0$ or $1$. This is where the "integer" in the linear integer program comes from. The summarize the above as a set of equations. We want
 
 $$
-\begin{*align}
+\begin{align}
 \textrm{Minimize    } cx\\
 \textrm{Subject to    }  Ax \geq b\\
 \textrm{where}\\
 x_{i} \in \{0,1\} \textrm{ for } i = 1,...,N\\
 c_{j} = 1 \textrm{ for } j=1,...,M\\
 b_{i} = 1 \textrm{ for } i=1,...,N\\
-\end{*align}
+\end{align}
 $$
 
 So why do we bother to set it up in this form? Well we want to be able to use powerful Linear Integer Programming software libraries that have been developed. These libraries use sophisticated exact and heuristic algorithms to speed up the search for the optimal vector $x$. A famous algorithm of this type is [Branch and Bound](https://en.wikipedia.org/wiki/Branch_and_bound) which has an Australian connection via the idea's genesis in the work of the mathematician [Alison Harcourt](https://en.wikipedia.org/wiki/Alison_Harcourt). The two most notable libraries for solving Integer Linear Programs are CPLEX and Gurobi (which are unfortunately closed source so I won't bother linking to commercial websites for these). There are open source alternatives such as the c++ library [COIN-OR](https://github.com/coin-or/Clp), which I think (maybe) is what Mathematica uses underneath to solve these problems.
