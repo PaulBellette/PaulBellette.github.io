@@ -4,7 +4,7 @@ title: "Set Covering as a Linear Integer Program"
 date: 2020-03-22
 ---
 
-So long time and no posts. I have a half written thing that I have been going back and forth on with no real commitment but I feel inspired to write this one. This is a slight departure from my normal all caps rants into a more gentle introduction to some basic ideas. This post is coming from me giving a far too quick explanation of how you can set up the Set Cover Problem as a Linear Integer Program at the end of a lecture I gave for the UQ Master of Data Science Math7501 course. I felt like I didn't give a super clear overview as I was rushing, so I aim to rectify that here with this post.
+So, long time and no posts. I have a half written thing that I have been going back and forth on with no real commitment but I feel inspired to write this one. This is a slight departure from my normal all caps rants into a more gentle introduction to some basic ideas. This post is coming from me giving a far too quick explanation of how you can set up the Set Cover Problem as a Linear Integer Program at the end of a lecture I gave for the UQ Master of Data Science Math7501 course. I felt like I didn't give a super clear overview as I was rushing, so I aim to rectify that here with this post.
 
 ## The Set Cover Problem
 
