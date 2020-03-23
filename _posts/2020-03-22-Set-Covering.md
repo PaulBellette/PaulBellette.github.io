@@ -25,7 +25,7 @@ $$
 
 So the set cover problem can be set up as a decision problem or as an optimization problem. The decision problem is "can I sign up for $k$ streaming services such that I can see all the movies that I want to watch". The optimization version ask "what is the minimal number of streaming services I can sign up for such that I can watch all the movies that I want to see?". Now (hopefully if I set it up right) you can see that each stream service is a proper subset of $U$ and the union of the streaming services, which we will call $S$, is equal to $U$. So straight away you can see that a naive strategy would be enumerate all the subsets of $S$ and find the smallest one where the union of the subsets covers $U$. The problem is that this will involve $2^N$ operations, where $N$ is the number of subsets (4 streaming services in this case, which isn't that big for this particular example but can get very large for real problems making naive search practically impossible).
 
-The idea behind the next part is to show how we can use the tools of linear algebra to represent this problem, which allows us to make us of powerful Linear Integer Programming software to greatly speed up the search for the optimal solution.
+The idea behind the next part is to show how we can use the tools of linear algebra to represent this problem, which allows us to make use of powerful Linear Integer Programming software to greatly speed up the search for the optimal solution.
 
 ## The Set Cover Problem as Linear Algebra
 
