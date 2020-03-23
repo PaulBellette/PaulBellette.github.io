@@ -43,13 +43,13 @@ $$ y = Ax = [1, 1, 0, 0, 1, 0, 0, 0] $$
 
 i.e. Paris Texas, Rope and 火垂るの墓, which is what we expect. We can interpret this solution vector $y$ as the count of the number of times we have covered this particular movie with the streaming services selected in $x$. So to solve the covering problem we are constrained to have the elements of the vector $x$ as either zero or one and we need to have every element of $y$ greater or equal than one (so we can watch every movie in $U$). 
 
-Now the last part is working out how do we evaluate the objective, i.e. we want to select the minimum number of streaming services. Do do this we want to sum our $x$ vector. This can be simply achieved by taking the inner product of $x$ with a vector of all $1$'s. This has the advantage that we can generalize our problem if say we want to model the costs of the different services, we could just change the $1$'s for the price of each service.
+Now the last part is working out how do we evaluate the objective, i.e. we want to select the minimum number of streaming services. To do this we want to sum our $x$ vector. This can be simply achieved by taking the inner product of $x$ with a vector of all $1$'s. This has the advantage that we can generalize our problem if say we want to model the costs of the different services, we could just change the $1$'s for the price of each service.
 
-So to summarize we can turn the set cover problem into a Linear Algebra problem, provided we restrict the elements of $x$ to be either $0$ or $1$. This is where the "integer" in the linear integer program comes from. The summarize the above as a set of equations. We want
+So to summarize we can turn the set cover problem into a Linear Algebra problem, provided we restrict the elements of $x$ to be either $0$ or $1$. This is where the "integer" in the linear integer program comes from. To summarize the above as a set of equations, we want to
 
 $$
 \begin{align*}
-& \textrm{Minimize    } cx\\
+& \textrm{Minimize    } c.x\\
 & \textrm{Subject to    }  Ax \geq b\\
 & \textrm{where}\\
 & x_{i} \in \{0,1\} \textrm{ for } i = 1,...,N\\
