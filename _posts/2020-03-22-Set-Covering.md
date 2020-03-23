@@ -60,6 +60,8 @@ $$
 
 So why do we bother to set it up in this form? Well we want to be able to use powerful Linear Integer Programming software libraries that have been developed. These libraries use sophisticated exact and heuristic algorithms to speed up the search for the optimal vector $x$. A famous algorithm of this type is [Branch and Bound](https://en.wikipedia.org/wiki/Branch_and_bound) which has an Australian connection via the idea's genesis in the work of the mathematician [Alison Harcourt](https://en.wikipedia.org/wiki/Alison_Harcourt). The two most notable libraries for solving Integer Linear Programs are CPLEX and Gurobi (which are unfortunately closed source so I won't bother linking to commercial websites for these). There are open source alternatives such as the c++ library [COIN-OR](https://github.com/coin-or/Clp), which I think (maybe) is what Mathematica uses underneath to solve these problems.
 
+Challenge: Can you find the optimal combination of streaming services?
+
 ## Anything Else
 
 We are not always interested in exact solutions to these types of problems, greedy algorithms can work very well in practice. Another fun idea is that we can also relax the integer program to a linear program and interpret the real valued vector elements obtained as probabilities and use a randomized algorithm to search for good candidate solutions. I hope that you can see that this problem has many useful applications to real problems (as stated in the lecture I have been encountering this problem at my day job in the context of solving rostering problems with constraints around who can do which job).
