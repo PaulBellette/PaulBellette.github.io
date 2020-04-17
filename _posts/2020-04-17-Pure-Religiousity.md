@@ -1,0 +1,50 @@
+---
+layout: post
+title: "An Epiphanous Experience of Pure Religiosity"
+date: 2020-04-17
+---
+
+So I started to write this when everything here was on fire, somehow I couldn't finish it. Now strangely enough everyone is (hopefully) hiding in their homes from a brand new virus that is running amok. One linking thread that brings me back to the topic of this is the strange dance of the public opinion of "Science". From the dangerously out of their depth pseudo scientists with an ipython notebook, a differential equation they just read about wikipedia and a dream (and some dubious assumed parameters) to the impenetrable narrow mindedness of conservative folk who decry the outrageous fraud that is being perpetrated by the use of "models" to make decisions about anything. Because all you need is Jesus in your heart, after all. Both are a worry, but I have far more empathy for the first stance.
+So I am drawn onto this interesting propaganda point, the shrill the cries of "it's just a model!" as a delegitimizing tactic. As a physical sciences type I am conditioned to think that everything is a model, what else is there for understanding the world? If you can't teach it to a computer, it isn't real science. So I struggle to even get what the "it's just a model" opinion even means. Now, there is a world of difference between some bullshit empirical auto-regressive model of some random time series data (that most of business and economic analysis seem to be currently based upon) and a genuine physical model. Physical models are the real deal and can be totally uncanny. It is hard to communicate to a lay person just how uncanny they can be. I'm talking here about the full fat models of basic physics. It can feel to the physicist as if the whole universe is rigged, given how well these models can represent reality. They can be so good that you doubt your measurements, not the validity of the model. I guess this is background that the "it's just a model" folks don't understand. I'm going to attempt to give a flavour of this pseudo religious feeling that I got for myself about physical models. It is like looking into the mind of god. One of the very few experiences of my life that I can say is religious in feeling. Whatever nihilistic temperament I may be currently nursing, it is hard to deny that physics can click everything into place so sublimely that the feeling that "there must something must be going on!" is very, very hard to dispel. I learnt this as a lad going through my science education. I wish I could remember when but I can definitely remember what it was. The physical wedding of electricity and magnetism and the starling prediction it uncovered. 
+
+## Statics -> Electricity
+
+So we are all familiar with electricity. You turn on the switch and the magic thing happens. We are so deeply immersed in this way of life that any possible regression for say the sake of the environment will make a reasonable proportion of the populations head's explode. We have only had things this way for a short time. Now give us baseload power or give us death. Our lives have been transformed. But I suspect most people don't understand electricity. It is part of the magic substrate of modern life. So let's go with an empirical observation. If we get two electric charges $q_{1}$ and $q_{2}$ (don't worry about the units yet) and we suspend them a distance of $r$ apart (again don't worry about the units) and measure the force on them $F$ you get an empirical inverse square law (repelling or attracting depending on if they are the same or opposite charges), called Coulomb's Law, one of the first forays into the physics of electricity. As maths it looks like this
+
+$$ F = \frac{k_{e}q_{1}q_{2}}{r^{2}} $$
+
+which is basically what I just said in before but in equation form instead of words. Coulomb himself set up this experiment using a torsion balance to remove the effect fo gravity. His setup looked like this
+
+![Coulomb]({{ https://paulbellette.github.io/ }}/assets/coulomb_torsion_experiment.png)
+
+Now $k_{e}$ is a constant that depends on the units used for force, distance and charge. Typically we use SI units (so Newtons, metres and Coulombs) where we express it in terms of the physical constant $\epsilon_{0}$, called the vacuum electric permittivity of free space, as
+
+$$k_{e} = \frac{1}{4\pi\epsilon_{0}}$$
+
+So nothing controversial here. This experimental observation has been verified over an extraordinary range of length scales.
+
+## Statics -> Magnetism
+
+So strangely enough if you play with magnets you can see a similar effect, a force that decays with distance. Now there is a real complication here. Magnetic poles don't come alone, with every north pole along comes a south. As much as you try you are stuck with a dipole, no monopoles have been found. This is pretty curious, but maybe a little less curious when you read later on. So if you two really long bar magnets and hold a north pole of one near the south pole of another then you see this inverse square law again. However, when you get really far away compared to the length of the magnet it drops away like an inverse cube (because it is a dipole). Annoying but tantalizing! So if you look in this short separation region where you can say it is approximately like two magnetic poles interacting the relationship looks like
+
+$$ F = \frac{\mu_{0}qm_{1}qm_{2}}{4\pir^{2}} $$
+
+where $r$ is the distance in metres again, $qm_{i}$ is the $i^{th}$ "magnetic charge" measured in the seemingly whacky units of ampere-metres and $\mu_{0}$ is the magnetic permeability of free space. 
+So this guy isn't experimentally verifiable over as big a range and the electric one due to the dipole business, but another curious experimental fact shows a strange union exists between electricity and magnetism. If you twist a wire into a coil you can make an "electromagnet" by running a continuous current through the wire, everyone must have made one as a kid (or at least the nerdy ones like me). If we are interested in the magnetic field that this produces we apply something called the Biot-Savart law, which gets a bit nastier mathematically so I won't describe fully but it gives an equation that describes the magnetic field generated by a current. You then use something called the Lorentz Force law to calculate forces. A simple application that can be easily experimentally validated when you combine these results is the prediction of an attractive force between two parallel wires carrying current. This gives a force per unit length ($F/l$) of the form
+
+$$ \frac{F}{l} = \frac{\mu_{0}I_{1}I_{2}}{2\pir} $$
+
+where $I_{i}$ is the current in the $i^{th}$ wire and $r$ is the separation between the two wires. This is actually why power lines sometimes have spacers, to stop them whacking into one another if a strong wind blows them too close together and they start attracting one another.
+So great I hear you say, what was all that about. Well I want to impress on you that there are these four experiments you could totally do yourself and convince yourself are true (1) getting some charged points and measure the force versus separation, (2) getting some magnets and measuring the force versus separation (for small distances), (3) making an electromagnet by coiling a wire and seeing that magnetism is just a twisty electric field and (4) getting two wires and measuring the force per length versus separation and current. You could imagine getting some crude estimates for these magic parameters $\epsilon_{0}$ and $\mu_{0}$ with some fairly boring high-school style physics experiments. I hope you could also imagine that with care, these could be measured to great precision (high quality measurement equipment, vacuums, super conductors, you get the picture). 
+
+## Let There Be Light...
+
+So here comes the head fuck, if you calculate
+
+$$\frac{1}{\sqrt{\epsilon_{0}\mu_{0}}}$$
+
+you will find that it is equal to the speed of light. To a lot of zeros. Basically all the zeros. In fact they redefined the physical constants so that this is now true by default and it means you measured something wrong. The derivation for this is a bit trickier than where I was planning to aim for with this post, but it involves a synthesis of all these experimentally derived laws of Electricity and Magnetism into a system of partial differential equations called Maxwell's Equations. One thing Maxwell's Equations predicts is propagating waves in space of coupled Electric and Magnetic Fields, where the wave speed is given by the expression above. This is a purely mathematical derivation. This was an enormous discovery by Maxwell in about 1865, that is strangely absent in pop culture. Everyone knows Newton and Einstein, but somehow Maxwell misses out on the glory. Nobody really knew what light was before this, and this discovery also lead into the investigation of radio waves and onwards until we arrive at the modern world. Absolutely astonishing.
+
+## On Models
+
+So this is a high point in the physical modelling art. There are others that are similarly sublime, for example the prediction of the presence of Neptune by Le Verrier using Newtonian Mechanics, the prediction of the perihelion shift of Mercury by Einstein by using General Relativity and the various predictions of Quantum Mechanics that have been verified to an incredible degree of precision. This result by Maxwell is for me the most approachable and the most personally poignant. So If any ignorant bastard says "it's just a model", go and shove Maxwell's equations down their throat and tell them to fuck off back into a cave. On the other hand, toy models and exploratory data analysis really should be taken with a grain of salt. A serious discussion of the assumptions a model makes and an understanding of the empirical prediction uncertainty should be given. In fact models and data should be open, so any serious person can verify the results for themselves. And help if possible.
